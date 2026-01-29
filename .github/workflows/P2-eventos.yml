@@ -1,8 +1,9 @@
 name: P2 Eventos
 
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
+  # push:
+  # pull_request:
 
 jobs:
   eventos-test:
