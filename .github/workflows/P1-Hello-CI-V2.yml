@@ -1,4 +1,4 @@
-name: P1 Hello CI
+name: P1 Hello CI V2
 
 on:
   push:
