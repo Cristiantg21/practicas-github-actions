@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mostrar evento que disparo el workflow
-        run: echo "Workflow ejecutado por el evento: ${{ github.event_name }}"
+        run: |
+          echo "Workflow ejecutado por el evento: ${{ github.event_name }}"
 
 
