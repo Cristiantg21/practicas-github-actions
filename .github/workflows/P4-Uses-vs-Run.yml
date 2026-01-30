@@ -20,3 +20,7 @@ jobs:
       - name: Step 3 - Mensaje usando run
         run: |
           echo "Este step usa run para ejecutar comandos"
+          
+      - name: Extra - Agregar un step que haga pwd
+        run: |
+          pwd
