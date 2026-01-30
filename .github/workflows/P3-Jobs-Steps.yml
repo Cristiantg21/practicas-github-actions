@@ -1,0 +1,25 @@
+name: P1 Jobs y Steps
+
+on:
+  push:
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step 1 - Mensaje inicial
+        run: |
+          echo "Iniciando el Job de Github Actions"
+          
+      - name: Step 2 - Mostrar sistema operativo
+        run: |
+          uname -a
+
+      - name: Step 3 - Mostrar version de Python
+        run: |
+          python --version
+
+      - name: Step 4 - Mensaje final
+        run: |
+          echo "Job finalizado correctamente"
