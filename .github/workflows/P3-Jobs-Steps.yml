@@ -16,6 +16,10 @@ jobs:
         run: |
           uname -a
 
+      - name: Paso extra
+        run: |
+          echo "Este step se ejecuta en medio del Job"
+
       - name: Step 3 - Mostrar version de Python
         run: |
           python --version
