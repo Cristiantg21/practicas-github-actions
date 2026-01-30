@@ -1,7 +1,8 @@
 name: P3 Jobs y Steps
 
 on:
-  push:
+  workflow_dispatch:
+  # push:
 
 jobs:
   demo-job:
