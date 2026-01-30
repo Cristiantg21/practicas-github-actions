@@ -9,14 +9,14 @@ jobs:
   demo-uses-run:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Step 1 - Checkout del respositorio (Uses)
-      uses: actions/checkout@v4
+    steps:
+      - name: Step 1 - Checkout del respositorio (Uses)
+        uses: actions/checkout@v4
 
-    - name: Step 2 - Mostrar archivos del repo (run)
-      run: |
-        ls -la
+      - name: Step 2 - Mostrar archivos del repo (run)
+        run: |
+          ls -la
 
-    - name: Step 3 - Mensaje usando run
-      run: |
-        echo "Este step usa run para ejecutar comandos"
+      - name: Step 3 - Mensaje usando run
+        run: |
+          echo "Este step usa run para ejecutar comandos"
