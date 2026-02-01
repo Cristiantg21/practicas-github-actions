@@ -32,3 +32,8 @@ jobs:
       - name: Step 3 - Verificar que STEP_VAR no existe
         run: |
           echo "STEP_VAR = $STEP_VAR"
+
+      - name: Step Extra
+        run: |
+          echo "Actor del workflow: $GITHUB_ACTOR"
+        
