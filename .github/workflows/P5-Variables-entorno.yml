@@ -12,23 +12,23 @@ jobs:
   demo-vars:
     runs-on: ubuntu-latest
 
-  env:
-    JOB_VAR: "variable_del_job"
+    env:
+      JOB_VAR: "variable_del_job"
 
-  steps:
-    - name: Step 1 - Mostrar variables global y de job
-      run: |
-        echo "GLOBAL_VAR = $GLOBAL_VAR"
-        echo "JOB_VAR = $JOB_VAR"
+    steps:
+      - name: Step 1 - Mostrar variables global y de job
+        run: |
+          echo "GLOBAL_VAR = $GLOBAL_VAR"
+          echo "JOB_VAR = $JOB_VAR"
 
-    - name: Step 2 - Variable solo del step
-      env:
-        STEP_VAR: "variable_global"
-      run: |
-        echo "GLOBAL_VAR = $GLOBAL_VAR"
-        echo "JOB_VAR = $JOB_VAR"
-        echo "STEP_VAR = $STEP_VAR"
+      - name: Step 2 - Variable solo del step
+        env:
+          STEP_VAR: "variable_global"
+        run: |
+          echo "GLOBAL_VAR = $GLOBAL_VAR"
+          echo "JOB_VAR = $JOB_VAR"
+          echo "STEP_VAR = $STEP_VAR"
 
-    - name: Step 3 - Verificar que STEP_VAR no existe
-      run: |
-        echo "STEP_VAR = $STEP_VAR"
+      - name: Step 3 - Verificar que STEP_VAR no existe
+        run: |
+          echo "STEP_VAR = $STEP_VAR"
