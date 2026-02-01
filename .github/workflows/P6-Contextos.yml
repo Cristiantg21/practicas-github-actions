@@ -1,0 +1,20 @@
+name: P6 Contextos de Github
+
+on:
+  push:
+    paths:
+      - ".github/workflows/P6-Contextos.yml"
+
+jobs:
+  mostrar-contextos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar informacion del contexto de github
+        run: |
+          echo "Repositorio: ${{ github.repository }}"
+          echo "Actor (quien hizo el push): ${{ github.actor}}"
+          echo "Evento: ${{ github.event_name }}"
+          echo "SHA del commit: ${{ github.sha }}"
+
+
