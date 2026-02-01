@@ -19,11 +19,11 @@ jobs:
           echo "Rama: ${{ github.ref }}"
 
       - name: Solo en push
-        if: github.event_name=="push"
+        if: github.event_name == 'push'
         run: |
           echo "Este paso solo corre en PUSH"
 
       - name: Solo en pull request
-        if: github.event_name == "pull_request"
+        if: github.event_name == 'pull_request'
         run: |
           echo "Este paso solo corre en PULL REQUEST"
