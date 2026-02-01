@@ -16,5 +16,6 @@ jobs:
           echo "Actor (quien hizo el push): ${{ github.actor}}"
           echo "Evento: ${{ github.event_name }}"
           echo "SHA del commit: ${{ github.sha }}"
+          echo "Este workflow fue ejecutado por ${{ github.ref }} en la rama ${{ github.ref_name }}"
 
 
