@@ -27,3 +27,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           echo "Este paso solo corre en PULL REQUEST"
+
+      - name: Modificacion del proyecto desde rama alterna
+        run: |
+          echo "Rama ${{ github.ref }}"
