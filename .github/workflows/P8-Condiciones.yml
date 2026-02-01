@@ -1,0 +1,30 @@
+name: P8 Condiciones
+
+on:
+  push:
+    paths:
+      - ".github/workflows/P8-Condiciones.yml"
+  pull_request:
+    paths:
+      - ".github/workflows/P8-Condiciones.yml"
+
+  jobs:
+    demo-condiciones:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Paso comun (Siempre se ejecuta)
+          run: |
+            echo "Evento: ${{ github.event_name }}"
+            echo "Rama: ${{ github.ref }}"
+
+        - name: Solo en push
+          if: github.event_name=="push"
+          run: |
+            echo "Este paso solo corre en PUSH"
+
+        - name: Solo en pull request
+          if: github.event_name == "pull_request"
+          run: |
+            echo "Este paso solo corre en PULL REQUEST"
+
