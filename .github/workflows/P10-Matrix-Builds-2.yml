@@ -1,0 +1,34 @@
+name: P10 Matrix Builds
+
+on:
+  push:
+    paths:
+      - ".github/workflows/P10-Matrix-Builds.yml"
+
+jobs:
+  test-matrix:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+        os: [ ubuntu-latest, windows-latest ]
+
+    runs-on: ${{ matrix.os }}
+        
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Verificar versión de Python
+        run: python --version
+
+      - name: Simular test ML
+        run: |
+          echo "Ejecutando tests con python ${{ matrix.python-version }}"
+
