@@ -1,0 +1,33 @@
+name: P11 - Cache de dependencias
+
+on:
+  push:
+    paths:
+      - ".github/workflows/P11-Cache.yml"
+
+jobs:
+  cache-job:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version}}
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ runner.os }}-${{ matrix.python-version }}
+
+      - name: Instalar dependencias
+        run: |
+          pip install numpy pandas
