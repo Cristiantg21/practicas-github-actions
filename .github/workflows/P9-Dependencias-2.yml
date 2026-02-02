@@ -27,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     
     needs: job_tests
+    
+    if: always()
 
     steps:
       - name: Simular entrenamiento
