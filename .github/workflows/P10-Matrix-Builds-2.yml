@@ -1,9 +1,9 @@
-name: P10 Matrix Builds
+name: P10 Matrix Builds V2
 
 on:
   push:
     paths:
-      - ".github/workflows/P10-Matrix-Builds.yml"
+      - ".github/workflows/P10-Matrix-Builds-2.yml"
 
 jobs:
   test-matrix:
