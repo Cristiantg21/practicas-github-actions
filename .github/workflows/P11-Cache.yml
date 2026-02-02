@@ -31,3 +31,7 @@ jobs:
       - name: Instalar dependencias
         run: |
           pip install numpy pandas
+
+      - name: Comprobar el cache
+        run: |
+          echo "Comprobando cache"
