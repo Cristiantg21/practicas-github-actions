@@ -3,7 +3,7 @@ name: P9 Dependencias (Needs)
 on:
   push:
     paths:
-      - "github/workflows/P9-Dependencias.yml"
+      - ".github/workflows/P9-Dependencias.yml"
 
 jobs:
   job_tests:
@@ -28,6 +28,6 @@ jobs:
       - name: Simular entrenamiento
         run: |
           echo "Entrenando modelo... "
-          echo "Modelo entenado"
+          echo "Modelo entrenado"
 
 
